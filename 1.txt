@@ -1,0 +1,39 @@
+console.log("starter1.js linked");
+let zones =document.querySelectorAll(".zone");
+
+let xArray=[0,0,0,0,0,0,0,0,0];
+let oArray=[0,0,0,0,0,0,0,0,0];
+let counter=0;
+
+function clickEventX() {
+    this.removeEventListener("click", clickEventX);
+    if(counter%2===0){
+ this.innerHTML="<img src=\'https://upload.wikimedia.org/wikipedia/commons/8/8b/AirAsia_X_Logo.svg\'>";
+ for (let i = 0; i < zones.length; i++) {
+
+    if (zones[i].innerHTML.includes('https://upload.wikimedia.org/wikipedia/commons/8/8b/AirAsia_X_Logo.svg')) {
+      xArray[i]=1;
+    }
+  }
+}else {
+    this.innerHTML="<img src=\'http://dailydropcap.com/images/O-5.jpg\'>";
+        for (let i = 0; i < zones.length; i++) {
+           if (zones[i].innerHTML.includes('http://dailydropcap.com/images/O-5.jpg')) {
+             oArray[i]=1;
+           }
+          
+         }
+}
+
+counter++;
+}
+
+ function stopPlaying(){
+    for (let i = 0; i < zones.length; i++)for (let i = 0; i < zones.length; i++)
+ }
+
+   for (let i = 0; i < zones.length; i++) {
+    
+        zones[i].addEventListener("click", clickEventX);
+  
+     }
