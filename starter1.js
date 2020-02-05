@@ -94,8 +94,7 @@ function test(){
       //console.log('hi x');
       document.querySelector('h1').innerText=Player1.team+" team Win";
       Player1WinCounter++;
-      localStorage.setItem("xWinStorage",Number(localStorage.xWinStorage)+1);
-      console.log('hi x'+localStorage.getItem("xWinStorage"));
+      resultStorage(Player1.team);
       for (let i = 0; i < zones.length; i++) {
         zones[i].removeEventListener("click", clickEventX);
      }
@@ -110,6 +109,7 @@ function test(){
       {
         document.querySelector('h1').innerText=Player2.team+" team Win";
         Player2WinCounter++;
+       resultStorage(Player2.team);//this functin will update the winer storage
       localStorage.setItem("oWinStorage",Number(localStorage.oWinStorage)+1);
       console.log('hi x'+localStorage.getItem("oWinStorage"));
         for (let i = 0; i < zones.length; i++) {
@@ -138,6 +138,27 @@ function test(){
       localStorage.setItem("tieStorage",Number(localStorage.tieStorage)+1);
       console.log('hi x'+localStorage.getItem("tieStorage"));
         }
+}
+function resultStorage(team){
+  // if(team==="Donut"){
+  //   localStorage.setItem("Donut",Number(localStorage.Donut)+1);
+  //   document.querySelector('#donut').innerText=localStorage.getItem("Donut")+" wins";
+  // }else if(team==="Cat"){
+  //   localStorage.setItem("Cat",Number(localStorage.Donut)+1);
+  //   document.querySelector('#cat').innerText=localStorage.getItem("Cat")+" wins";
+  // }else if(team==="Coffee"){
+  //   localStorage.setItem("Coffee",Number(localStorage.Donut)+1);
+  //   document.querySelector('#coffee').innerText=localStorage.getItem("Coffee")+" wins";
+  // }else if(team==="Unicorn"){
+  //   localStorage.setItem("Unicorn",Number(localStorage.Donut)+1);
+  //   document.querySelector('#unicorn').innerText=localStorage.getItem("Unicorn")+" wins";
+  // }else if(team==="Kwala"){
+  //   localStorage.setItem("Kwala",Number(localStorage.Donut)+1);
+  //   document.querySelector('#kwala').innerText=localStorage.getItem("Kwala")+" wins";
+  // }else if(team==="Sushi"){
+  //   localStorage.setItem("Sushi",Number(localStorage.Donut)+1);
+  //   document.querySelector('#sushi').innerText=localStorage.getItem("Sushi")+" wins";
+  // }
 }
 //this function will call win the user whant to reset the game and start again
 function reSetEvent(){
