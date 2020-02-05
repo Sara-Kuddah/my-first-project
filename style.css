@@ -1,13 +1,23 @@
 *{
   box-sizing: border-box;
 }
+body{
+  background-image: url(pic/background_paper.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 .container {
+    background-image: url(pic/crose333.png);
+    background-size: 400px 300px;
+    background-repeat: no-repeat;
+    background-position: center;
     text-align: center;
     margin-top: 10%;
     margin-bottom: 10%;
     margin-left: 10%;
     margin-right: 10%;
-    border: solid rgb(70, 112, 151);
+    /* border: solid rgb(90, 155, 216); */
     position: absolute;
     height: 400px;
     width: 400px;
@@ -17,6 +27,26 @@
     justify-content: center;
     margin: 11% 30% auto;
   }
+  .cotanerPaper {
+    background-image: url(pic/lined_p3.jpg);
+      background-size: 400px 400px;
+      background-repeat: no-repeat;
+      background-position: center;
+      text-align: center;
+      margin-top: 10%;
+      margin-bottom: 10%;
+      margin-left: 10%;
+      margin-right: 10%;
+      /* border: solid rgb(90, 155, 216); */
+      position: absolute;
+      height: 400px;
+      width: 400px;
+      border-top-width: 3px;
+      border-left-width: 3px;
+      border-bottom-width: 3px;
+      justify-content: center;
+      margin: 11% 30% auto;
+    }
   div{
     display: block;
   position: static; 
@@ -28,10 +58,11 @@
 
   height: 80px;
 
-  border: solid rgb(70, 112, 151);
+  /* border: solid rgb(70, 112, 151); */
 
-  margin: 0px;
-
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 7px;
   display: inline-block;
 
   transition: 0.5s all;
@@ -55,7 +86,7 @@
     border-bottom-width: 3px;
     justify-content: center;
     margin: 11% 30% auto;
-    display: none;
+    display: block;
     background-color: rgba(255,255,255,.5);
     /* background-image:  url(pic/c2.gif); */
     background-size: 150px 150px;
@@ -66,7 +97,9 @@
   
  
   button{
-    margin-top: 10px;
+    margin-top: 4%;
+    background-color: palevioletred;
+    padding: 7px;
   }
 
   
@@ -79,6 +112,31 @@
     width: 80px;
     height: 80px;  
   }
+  h1{
+    font-family: cursive;
+    font-size: 23px;
+    font-weight: 1000;
+    /* color: rgb(161, 174, 206); */
+    color: rgb(124, 142, 187);
+  }
+  #Player1Name{
+    font-family: cursive;
+    font-size: 15px;
+    font-weight: 1000;
+    color: #00685a;
+  }
+  #Player2Name{
+    font-family: cursive;
+    font-size: 15px;
+    font-weight: 1000;
+    color: #802020;
+  }
+
+.submitPage{
+  font-family: cursive;
+    font-size: 20px;
+  color: rgb(216, 67, 116);
+}
   
   
   

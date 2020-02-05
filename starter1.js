@@ -6,10 +6,13 @@ const choiseList = document.querySelector('#choiselist');
 choiseList.addEventListener('click', function(event) {
   if(Player1.picSrc==="")
   {console.log("Player1"+event.target.src);
-   Player1.picSrc=event.target.src;}else 
+   Player1.picSrc=event.target.src;
+  //try to change background
+  event.target.style.border = "thick  solid #00685a";
+}else
    {console.log("Player2"+event.target.src);
-   Player2.picSrc=event.target.src;}
-  
+   Player2.picSrc=event.target.src;
+   event.target.style.border = "thick  solid #802020";} 
 });
 
 let xArray=[0,0,0,0,0,0,0,0,0];
@@ -54,7 +57,7 @@ function clickEventX() {
       xArray[i]=1;
     }
   }
-  document.querySelector('h1').innerText="Player2 turen";
+  document.querySelector('h1').innerText=Player2.name+" turen";
 }else {
   
     this.innerHTML=Player2.pic;
@@ -64,7 +67,7 @@ function clickEventX() {
            }
           
          }
-         document.querySelector('h1').innerText="Player1 turen";
+         document.querySelector('h1').innerText=Player1.name+" turen";
 }
 test();
 
@@ -132,17 +135,20 @@ function test(){
 function reSetEvent(){
   for (let i = 0; i < zones.length; i++) {
     zones[i].innerHTML=null;
-    document.querySelector('h1').innerText="Player1 turen";
+    document.querySelector('h1').innerText=Player1.name+" turen";
     zones[i].addEventListener("click", clickEventX);
     document.querySelector("button").addEventListener("click",reSetEvent);
   }
    xArray=[0,0,0,0,0,0,0,0,0];
    oArray=[0,0,0,0,0,0,0,0,0];
+   counter=0;
 }
 //this function will save the name of the user
 function inputInfo(){
   Player1.name=document.querySelector('#Player1Name').value;
   Player2.name=document.querySelector('#Player2Name').value;
+  document.querySelector('h1').innerHTML=Player1.name+" turen";
+  document.querySelector('.winPage').style.display = "none"
 }
 //this function will call to save the player pic
 function choiceTeam(){
