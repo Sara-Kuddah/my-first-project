@@ -1,16 +1,18 @@
 console.log("starter1.js linked");
 let zones =document.querySelectorAll(".zone");
 let choices=document.querySelectorAll(".choice");
-//we create this to give the usre list of selection 
+//we create this to give the usre list of selection of team pictures
 const choiseList = document.querySelector('#choiselist');
+//this choiceCounter will used to make the user select only 2 pictures
 let choiceCounter=0
+//this event will call when user try to choise pic
 choiseList.addEventListener('click', function(event) {
   if(choiceCounter<2){
   if(Player1.picSrc==="")
   {console.log("Player1"+event.target.src);
    Player1.picSrc=event.target.src;
   //try to change border
-  event.target.style.border = "thick  solid #00685a";
+  event.target.style.border = "thick  solid #00685a";//the img porder will change after click on it
   choiceCounter++;
 }else
    {console.log("Player2"+event.target.src);
@@ -19,13 +21,13 @@ choiseList.addEventListener('click', function(event) {
    event.target.style.border = "thick  solid #802020";
    choiceCounter++;} 
 }});
-
-let xArray=[0,0,0,0,0,0,0,0,0];
-let oArray=[0,0,0,0,0,0,0,0,0];
-let counter=0;
-let Player1WinCounter=0;
-let Player2WinCounter=0;
-let tieCounter=0;
+let xArray=[0,0,0,0,0,0,0,0,0];//this will used to test the resulte So we can know when X'Player1' win
+let oArray=[0,0,0,0,0,0,0,0,0];//this will used to test the resulte So we can know when o'Player2' win
+let counter=0;//this counter to swich btween players
+let Player1WinCounter=0;//will used in feuture
+let Player2WinCounter=0;//will used in feuture
+let tieCounter=0;//will used in feuture
+//this objecte will save user name and the pic which is he choiced
 const Player1={name:"" ,
                picSrc:"" ,
                pic:"",
@@ -34,37 +36,37 @@ const Player2={name:"" ,
                picSrc:"" ,
                pic:"",
                team:""};
-//I dont think that I need it any more.
+//I dont think that I need it any more.but maybe later.
 const img=[{xPic :"<img src=\'https://upload.wikimedia.org/wikipedia/commons/8/8b/AirAsia_X_Logo.svg\'>",
            xSrc :'https://upload.wikimedia.org/wikipedia/commons/8/8b/AirAsia_X_Logo.svg'},
            {oPic :"<img src=\'http://dailydropcap.com/images/O-5.jpg\'>",
            oSrc :'http://dailydropcap.com/images/O-5.jpg'
           }]
-//this will give the let the user choige the team.
+//this will let the user choige the team pic
 for(let i=0;i<choices.length;i++)
 {choices[i].addEventListener("click",choiceTeam);
 console.log(choices[i].innerHTML);
 }
-//this will get the user names.
+//this will get the user names from input.
 document.querySelector('#submit').addEventListener("click",inputInfo);
-//here the game will start.
+//here the game will start.********************************************
 for (let i = 0; i < zones.length; i++) {
     zones[i].addEventListener("click", clickEventX);
-   document.querySelector("button").addEventListener("click",reSetEvent);
+   document.querySelector("button").addEventListener("click",reSetEvent);//this will seset the game
              }
 //will call it when the user click on game zone
 function clickEventX() {
     this.removeEventListener("click", clickEventX);
     if(counter%2===0){
       
- this.innerHTML=Player1.pic;
+ this.innerHTML=Player1.pic;//in this part the pic will print in the game box
  for (let i = 0; i < zones.length; i++) {
 
     if (zones[i].innerHTML===Player1.pic) {
-      xArray[i]=1;
+      xArray[i]=1; //naw will update xArray in same box played location.So we can test later 
     }
   }
-  document.querySelector('h1').innerText=Player2.name+" turen";
+  document.querySelector('h1').innerText=Player2.name+" turn";//here will print the turn
 }else {
   
     this.innerHTML=Player2.pic;
@@ -74,9 +76,9 @@ function clickEventX() {
            }
           
          }
-         document.querySelector('h1').innerText=Player1.name+" turen";
+         document.querySelector('h1').innerText=Player1.name+" turn";
 }
-test();
+test();//naw we are calling this function to tist if there are a winer
 
 counter++;
 }
@@ -91,12 +93,11 @@ function test(){
     xArray[0]+xArray[4]+xArray[8]===3||
     xArray[2]+xArray[4]+xArray[6]===3)
     {
-      //console.log('hi x');
       document.querySelector('h1').innerText=Player1.team+" team Win";
       Player1WinCounter++;
-      resultStorage(Player1.team);
+      resultStorage(Player1.team);//will udate local storege of the winner team
       for (let i = 0; i < zones.length; i++) {
-        zones[i].removeEventListener("click", clickEventX);
+        zones[i].removeEventListener("click", clickEventX);//after winner massege this will remove all lesener
      }
     }else if(oArray[0]+oArray[1]+oArray[2]===3||//if O win
       oArray[3]+oArray[4]+oArray[5]===3||
@@ -110,10 +111,9 @@ function test(){
         document.querySelector('h1').innerText=Player2.team+" team Win";
         Player2WinCounter++;
        resultStorage(Player2.team);//this functin will update the winer storage
-      localStorage.setItem("oWinStorage",Number(localStorage.oWinStorage)+1);
-      console.log('hi x'+localStorage.getItem("oWinStorage"));
+      //will udate local storege of the winner team
         for (let i = 0; i < zones.length; i++) {
-          zones[i].removeEventListener("click", clickEventX);
+          zones[i].removeEventListener("click", clickEventX);//after winner massege this will remove all lesener
        }
       }else if(oArray[0]+
         oArray[1]+
@@ -133,32 +133,32 @@ function test(){
         xArray[6]+
         xArray[7]+
         xArray[8]>=9){
-          console.log('No Winer! Do you whant to play agein');
+          console.log('No Winner! Do you whant to play agein');
           tieCounter++;
       localStorage.setItem("tieStorage",Number(localStorage.tieStorage)+1);
       console.log('hi x'+localStorage.getItem("tieStorage"));
         }
-}
+}//this function resultStorage will update numper f winnig for each team, need to comlate
 function resultStorage(team){
-  // if(team==="Donut"){
-  //   localStorage.setItem("Donut",Number(localStorage.Donut)+1);
-  //   document.querySelector('#donut').innerText=localStorage.getItem("Donut")+" wins";
-  // }else if(team==="Cat"){
-  //   localStorage.setItem("Cat",Number(localStorage.Donut)+1);
-  //   document.querySelector('#cat').innerText=localStorage.getItem("Cat")+" wins";
-  // }else if(team==="Coffee"){
-  //   localStorage.setItem("Coffee",Number(localStorage.Donut)+1);
-  //   document.querySelector('#coffee').innerText=localStorage.getItem("Coffee")+" wins";
-  // }else if(team==="Unicorn"){
-  //   localStorage.setItem("Unicorn",Number(localStorage.Donut)+1);
-  //   document.querySelector('#unicorn').innerText=localStorage.getItem("Unicorn")+" wins";
-  // }else if(team==="Kwala"){
-  //   localStorage.setItem("Kwala",Number(localStorage.Donut)+1);
-  //   document.querySelector('#kwala').innerText=localStorage.getItem("Kwala")+" wins";
-  // }else if(team==="Sushi"){
-  //   localStorage.setItem("Sushi",Number(localStorage.Donut)+1);
-  //   document.querySelector('#sushi').innerText=localStorage.getItem("Sushi")+" wins";
-  // }
+  if(team==="Donut"){
+    localStorage.setItem("Donut",Number(localStorage.Donut)+1);
+  //  document.querySelector('#donut').innerText=localStorage.getItem("Donut")+" wins";
+  }else if(team==="Cat"){
+    localStorage.setItem("Cat",Number(localStorage.Donut)+1);
+  //  document.querySelector('#cat').innerText=localStorage.getItem("Cat")+" wins";
+  }else if(team==="Coffee"){
+    localStorage.setItem("Coffee",Number(localStorage.Donut)+1);
+  //  document.querySelector('#coffee').innerText=localStorage.getItem("Coffee")+" wins";
+  }else if(team==="Unicorn"){
+    localStorage.setItem("Unicorn",Number(localStorage.Donut)+1);
+  //  document.querySelector('#unicorn').innerText=localStorage.getItem("Unicorn")+" wins";
+  }else if(team==="Kwala"){
+    localStorage.setItem("Kwala",Number(localStorage.Donut)+1);
+  //  document.querySelector('#kwala').innerText=localStorage.getItem("Kwala")+" wins";
+  }else if(team==="Sushi"){
+    localStorage.setItem("Sushi",Number(localStorage.Donut)+1);
+   // document.querySelector('#sushi').innerText=localStorage.getItem("Sushi")+" wins";
+  }
 }
 //this function will call win the user whant to reset the game and start again
 function reSetEvent(){
@@ -172,7 +172,7 @@ function reSetEvent(){
    oArray=[0,0,0,0,0,0,0,0,0];
    counter=0;
 }
-//this function will save the name of the user
+//this function will save the name and team of the user
 function inputInfo(){
   Player1.name=document.querySelector('#Player1Name').value;
   Player2.name=document.querySelector('#Player2Name').value;
@@ -205,7 +205,7 @@ function inputInfo(){
   Player2.team="Sushi";
   
 }
-//this function will call to save the player pic
+//this function will call to save the player team pic
 function choiceTeam(){
   this.removeEventListener("click",choiceTeam);
   if(Player1.pic===""){
