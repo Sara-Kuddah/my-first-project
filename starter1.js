@@ -23,15 +23,17 @@ choiseList.addEventListener('click', function(event) {
 let xArray=[0,0,0,0,0,0,0,0,0];
 let oArray=[0,0,0,0,0,0,0,0,0];
 let counter=0;
-let xWinCounter=0;
-let oWinCounter=0;
+let Player1WinCounter=0;
+let Player2WinCounter=0;
 let tieCounter=0;
 const Player1={name:"" ,
                picSrc:"" ,
-               pic:""};
+               pic:"",
+              team:""};
 const Player2={name:"" ,
                picSrc:"" ,
-               pic:""};
+               pic:"",
+               team:""};
 //I dont think that I need it any more.
 const img=[{xPic :"<img src=\'https://upload.wikimedia.org/wikipedia/commons/8/8b/AirAsia_X_Logo.svg\'>",
            xSrc :'https://upload.wikimedia.org/wikipedia/commons/8/8b/AirAsia_X_Logo.svg'},
@@ -89,8 +91,9 @@ function test(){
     xArray[0]+xArray[4]+xArray[8]===3||
     xArray[2]+xArray[4]+xArray[6]===3)
     {
-      console.log('hi x');
-      xWinCounter++;
+      //console.log('hi x');
+      document.querySelector('h1').innerText=Player1.team+" team Win";
+      Player1WinCounter++;
       localStorage.setItem("xWinStorage",Number(localStorage.xWinStorage)+1);
       console.log('hi x'+localStorage.getItem("xWinStorage"));
       for (let i = 0; i < zones.length; i++) {
@@ -105,8 +108,8 @@ function test(){
       oArray[0]+oArray[4]+oArray[8]===3||
       oArray[2]+oArray[4]+oArray[6]===3)
       {
-        console.log('hi o');
-        oWinCounter++;
+        document.querySelector('h1').innerText=Player2.team+" team Win";
+        Player2WinCounter++;
       localStorage.setItem("oWinStorage",Number(localStorage.oWinStorage)+1);
       console.log('hi x'+localStorage.getItem("oWinStorage"));
         for (let i = 0; i < zones.length; i++) {
@@ -130,7 +133,7 @@ function test(){
         xArray[6]+
         xArray[7]+
         xArray[8]>=9){
-          console.log('what');
+          console.log('No Winer! Do you whant to play agein');
           tieCounter++;
       localStorage.setItem("tieStorage",Number(localStorage.tieStorage)+1);
       console.log('hi x'+localStorage.getItem("tieStorage"));
@@ -153,7 +156,33 @@ function inputInfo(){
   Player1.name=document.querySelector('#Player1Name').value;
   Player2.name=document.querySelector('#Player2Name').value;
   document.querySelector('h1').innerHTML=Player1.name+" turen";
-  document.querySelector('.winPage').style.display = "none"
+  document.querySelector('.winPage').style.display = "none";
+  if(Player1.picSrc.includes('logo_1_donut.png'))
+  Player1.team="Donut";
+  else if(Player1.picSrc.includes('logo_2_cat.png'))
+  Player1.team="Cat";
+  else if(Player1.picSrc.includes('logo_3_coffee.png'))
+  Player1.team="Coffee";
+  else if(Player1.picSrc.includes('logo_4_unicorn.png'))
+  Player1.team="Unicorn";
+  else if(Player1.picSrc.includes('logo_5_kwala.png'))
+  Player1.team="Kwala";
+  else if(Player1.picSrc.includes('logo_6_sushe.png'))
+  Player1.team="Sushi";
+  //inseart Player2 team
+  if(Player2.picSrc.includes('logo_1_donut.png'))
+  Player2.team="Donut";
+  else if(Player2.picSrc.includes('logo_2_cat.png'))
+  Player2.team="Cat";
+  else if(Player2.picSrc.includes('logo_3_coffee.png'))
+  Player2.team="Coffee";
+  else if(Player2.picSrc.includes('logo_4_unicorn.png'))
+  Player2.team="Unicorn";
+  else if(Player2.picSrc.includes('logo_5_kwala.png'))
+  Player2.team="Kwala";
+  else if(Player2.picSrc.includes('logo_6_sushe.png'))
+  Player2.team="Sushi";
+  
 }
 //this function will call to save the player pic
 function choiceTeam(){
