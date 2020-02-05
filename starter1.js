@@ -3,17 +3,22 @@ let zones =document.querySelectorAll(".zone");
 let choices=document.querySelectorAll(".choice");
 //we create this to give the usre list of selection 
 const choiseList = document.querySelector('#choiselist');
+let choiceCounter=0
 choiseList.addEventListener('click', function(event) {
+  if(choiceCounter<2){
   if(Player1.picSrc==="")
   {console.log("Player1"+event.target.src);
    Player1.picSrc=event.target.src;
-  //try to change background
+  //try to change border
   event.target.style.border = "thick  solid #00685a";
+  choiceCounter++;
 }else
    {console.log("Player2"+event.target.src);
    Player2.picSrc=event.target.src;
-   event.target.style.border = "thick  solid #802020";} 
-});
+   //try to change border
+   event.target.style.border = "thick  solid #802020";
+   choiceCounter++;} 
+}});
 
 let xArray=[0,0,0,0,0,0,0,0,0];
 let oArray=[0,0,0,0,0,0,0,0,0];
@@ -53,7 +58,7 @@ function clickEventX() {
  this.innerHTML=Player1.pic;
  for (let i = 0; i < zones.length; i++) {
 
-    if (zones[i].innerHTML.includes(Player1.picSrc)) {
+    if (zones[i].innerHTML===Player1.pic) {
       xArray[i]=1;
     }
   }
@@ -62,7 +67,7 @@ function clickEventX() {
   
     this.innerHTML=Player2.pic;
         for (let i = 0; i < zones.length; i++) {
-           if (zones[i].innerHTML.includes(Player2.picSrc)) {
+           if (zones[i].innerHTML===Player2.pic) {
              oArray[i]=1;
            }
           

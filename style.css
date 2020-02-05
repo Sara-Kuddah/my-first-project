@@ -96,10 +96,14 @@ body{
   }
   
  
-  button{
+  #submit,button{
     margin-top: 4%;
     background-color: palevioletred;
     padding: 7px;
+    
+  }
+  #submit{
+    margin-left: 7%;
   }
 
   
