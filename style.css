@@ -149,6 +149,34 @@ body{
 .winerlist{
   width: 210px;
 }
-  
+#donutStyl{
+  position: absolute;
+  left: 75%;
+}
+  #catStyl{
+    position: absolute;
+    left: 85%;
+  }
+  #coffeeStyl{
+    position: absolute;
+  left: 75%;
+  bottom: 30%;
+  }
+  #unicornStyl{
+    position: absolute;
+    left: 85%;
+    bottom: 30%;
+  }
+  #kwalaStyl{
+    position: absolute;
+    left: 75%;
+    bottom: 10%;
+  }
+  #susheStyl{
+    position: absolute;
+    left: 85%;
+    bottom: 10%;
+  }
+ 
   
   
