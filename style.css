@@ -151,30 +151,30 @@ body{
 }
 #donutStyl{
   position: absolute;
-  left: 75%;
+  left: 68%;
 }
   #catStyl{
     position: absolute;
-    left: 85%;
+    left: 78%;
   }
   #coffeeStyl{
     position: absolute;
-  left: 75%;
+  left: 68%;
   bottom: 30%;
   }
   #unicornStyl{
     position: absolute;
-    left: 85%;
+    left: 78%;
     bottom: 30%;
   }
   #kwalaStyl{
     position: absolute;
-    left: 75%;
+    left: 68%;
     bottom: 10%;
   }
   #susheStyl{
     position: absolute;
-    left: 85%;
+    left: 78%;
     bottom: 10%;
   }
  

@@ -36,12 +36,12 @@ const Player2={name:"" ,
                picSrc:"" ,
                pic:"",
                team:""};
-               document.querySelector('#donut').innerText=" wins "+localStorage.getItem("Donut")+" times";
-               document.querySelector('#cat').innerText=" wins "+localStorage.getItem("Cat")+" times";
-               document.querySelector('#coffee').innerText=" wins "+localStorage.getItem("Coffee")+" wins";
-               document.querySelector('#unicorn').innerText=" wins "+localStorage.getItem("Unicorn")+" wins";
-               document.querySelector('#kwala').innerText=" wins "+localStorage.getItem("Kwala")+" wins";
-               document.querySelector('#sushi').innerText=" wins "+localStorage.getItem("Sushi")+" wins";
+ document.querySelector('#donut').innerText=" wins "+localStorage.getItem("Donut")+" times";
+ document.querySelector('#cat').innerText=" wins "+localStorage.getItem("Cat")+" times";
+ document.querySelector('#coffee').innerText=" wins "+localStorage.getItem("Coffee")+" times";
+ document.querySelector('#unicorn').innerText=" wins "+localStorage.getItem("Unicorn")+" times";
+ document.querySelector('#kwala').innerText=" wins "+localStorage.getItem("Kwala")+" times";
+ document.querySelector('#sushi').innerText=" wins "+localStorage.getItem("Sushi")+" times";
 //I dont think that I need it any more.but maybe later.
 const img=[{xPic :"<img src=\'https://upload.wikimedia.org/wikipedia/commons/8/8b/AirAsia_X_Logo.svg\'>",
            xSrc :'https://upload.wikimedia.org/wikipedia/commons/8/8b/AirAsia_X_Logo.svg'},
@@ -154,16 +154,16 @@ function resultStorage(team){
    document.querySelector('#cat').innerText=" wins "+localStorage.getItem("Cat")+" times";
   }else if(team==="Coffee"){
     localStorage.setItem("Coffee",Number(localStorage.Coffee)+1);
-    document.querySelector('#coffee').innerText=" wins "+localStorage.getItem("Coffee")+" wins";
+    document.querySelector('#coffee').innerText=" wins "+localStorage.getItem("Coffee")+" times";
   }else if(team==="Unicorn"){
     localStorage.setItem("Unicorn",Number(localStorage.Unicorn)+1);
-    document.querySelector('#unicorn').innerText=" wins "+localStorage.getItem("Unicorn")+" wins";
+    document.querySelector('#unicorn').innerText=" wins "+localStorage.getItem("Unicorn")+" times";
   }else if(team==="Kwala"){
     localStorage.setItem("Kwala",Number(localStorage.Kwala)+1);
-    document.querySelector('#kwala').innerText=" wins "+localStorage.getItem("Kwala")+" wins";
+    document.querySelector('#kwala').innerText=" wins "+localStorage.getItem("Kwala")+" times";
   }else if(team==="Sushi"){
     localStorage.setItem("Sushi",Number(localStorage.Sushi)+1);
-    document.querySelector('#sushi').innerText=" wins "+localStorage.getItem("Sushi")+" wins";
+    document.querySelector('#sushi').innerText=" wins "+localStorage.getItem("Sushi")+" times";
   }
 }
 //this function will call win the user whant to reset the game and start again
@@ -182,7 +182,7 @@ function reSetEvent(){
 function inputInfo(){
   Player1.name=document.querySelector('#Player1Name').value;
   Player2.name=document.querySelector('#Player2Name').value;
-  document.querySelector('h1').innerHTML=Player1.name+" turen";
+  document.querySelector('h1').innerHTML=Player1.name+" turn";
   document.querySelector('.winPage').style.display = "none";
   if(Player1.picSrc.includes('logo_1_donut.png'))
   Player1.team="Donut";
