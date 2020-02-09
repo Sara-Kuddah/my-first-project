@@ -36,11 +36,22 @@ const Player2={name:"" ,
                picSrc:"" ,
                pic:"",
                team:""};
+  if(localStorage.getItem("Donut")===NaN){localStorage.getItem("Donut",0)}
  document.querySelector('#donut').innerText=" wins "+localStorage.getItem("Donut")+" times";
+
+ if(localStorage.getItem("Cat")===NaN){localStorage.getItem("Cat",0)}
  document.querySelector('#cat').innerText=" wins "+localStorage.getItem("Cat")+" times";
+
+ if(localStorage.getItem("Coffee")===NaN){localStorage.getItem("Coffee",0)}
  document.querySelector('#coffee').innerText=" wins "+localStorage.getItem("Coffee")+" times";
+
+ if(localStorage.getItem("Unicorn")===NaN){localStorage.getItem("Unicorn",0)}
  document.querySelector('#unicorn').innerText=" wins "+localStorage.getItem("Unicorn")+" times";
+
+ if(localStorage.getItem("Kwala")===NaN){localStorage.getItem("Kwala",0)}
  document.querySelector('#kwala').innerText=" wins "+localStorage.getItem("Kwala")+" times";
+
+ if(localStorage.getItem("Sushi")===NaN){localStorage.getItem("Sushi",0)}
  document.querySelector('#sushi').innerText=" wins "+localStorage.getItem("Sushi")+" times";
 //I dont think that I need it any more.but maybe later.
 const img=[{xPic :"<img src=\'https://upload.wikimedia.org/wikipedia/commons/8/8b/AirAsia_X_Logo.svg\'>",
@@ -139,6 +150,7 @@ function test(){
         xArray[6]+
         xArray[7]+
         xArray[8]>=9){
+          document.querySelector('h1').innerText="No winner,try again :)";
           console.log('No Winner! Do you whant to play agein');
           tieCounter++;
       localStorage.setItem("tieStorage",Number(localStorage.tieStorage)+1);
