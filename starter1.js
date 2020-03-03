@@ -182,7 +182,7 @@ function resultStorage(team){
 function reSetEvent(){
   for (let i = 0; i < zones.length; i++) {
     zones[i].innerHTML=null;
-    document.querySelector('h1').innerText=Player1.name+" turen";
+    document.querySelector('h1').innerText=Player1.name+" turn";
     zones[i].addEventListener("click", clickEventX);
     document.querySelector("button").addEventListener("click",reSetEvent);
   }
