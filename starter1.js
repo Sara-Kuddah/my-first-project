@@ -36,8 +36,17 @@ const Player2={name:"" ,
                picSrc:"" ,
                pic:"",
                team:""};
-            
-  if(localStorage.getItem("Donut")==='null'){localStorage.setItem("Donut",0)}
+               
+  if(localStorage.getItem("Donut")==='null' || localStorage.getItem("Cat")==='null'
+   ||localStorage.getItem("Coffee")==='null' || localStorage.getItem("Unicorn")==='null'
+   ||localStorage.getItem("Kwala")==='null' || localStorage.getItem("Sushi")==='null'){
+    localStorage.setItem("Donut",0);
+    localStorage.setItem("Cat",0);
+    localStorage.setItem("Coffee",0);
+    localStorage.setItem("Unicorn",0);
+    localStorage.setItem("Kwala",0);
+    localStorage.setItem("Sushi",0);
+  }
  document.querySelector('#donut').innerText=" wins "+localStorage.getItem("Donut")+" times";
 
  if(localStorage.getItem("Cat")==='null'){localStorage.setItem("Cat",0)}
