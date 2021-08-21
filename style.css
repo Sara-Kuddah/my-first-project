@@ -6,6 +6,7 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  height: 100vh;
 }
 .container {
     background-image: url(pic/crose333.png);
@@ -13,7 +14,7 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     text-align: center;
-    margin-top: 10%;
+    margin-top: 10% ;
     margin-bottom: 10%;
     margin-left: 10%;
     margin-right: 10%;
@@ -33,7 +34,7 @@ body{
       background-repeat: no-repeat;
       background-position: center;
       text-align: center;
-      margin-top: 10%;
+      margin-top: 10%  ;
       margin-bottom: 10%;
       margin-left: 10%;
       margin-right: 10%;
