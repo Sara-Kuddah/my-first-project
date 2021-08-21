@@ -1,60 +1,59 @@
-*{
+* {
   box-sizing: border-box;
 }
-body{
+body {
   background-image: url(pic/background_paper.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  height: 100vh;
+  height: 100%;
 }
 .container {
-    background-image: url(pic/crose333.png);
-    background-size: 400px 300px;
-    background-repeat: no-repeat;
-    background-position: center;
-    text-align: center;
-    margin-top: 10% ;
-    margin-bottom: 10%;
-    margin-left: 10%;
-    margin-right: 10%;
-    /* border: solid rgb(90, 155, 216); */
-    position: absolute;
-    height: 400px;
-    width: 400px;
-    border-top-width: 3px;
-    border-left-width: 3px;
-    border-bottom-width: 3px;
-    justify-content: center;
-    margin: 11% 30% auto;
-  }
-  .cotanerPaper {
-    background-image: url(pic/lined_p3.jpg);
-      background-size: 400px 400px;
-      background-repeat: no-repeat;
-      background-position: center;
-      text-align: center;
-      margin-top: 10%  ;
-      margin-bottom: 10%;
-      margin-left: 10%;
-      margin-right: 10%;
-      /* border: solid rgb(90, 155, 216); */
-      position: absolute;
-      height: 400px;
-      width: 400px;
-      border-top-width: 3px;
-      border-left-width: 3px;
-      border-bottom-width: 3px;
-      justify-content: center;
-      margin: 11% 30% auto;
-    }
-  div{
-    display: block;
-  position: static; 
-  
+  background-image: url(pic/crose333.png);
+  background-size: 400px 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+  /* border: solid rgb(90, 155, 216); */
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  border-top-width: 3px;
+  border-left-width: 3px;
+  border-bottom-width: 3px;
+  justify-content: center;
+  margin: 11% 30% auto;
 }
-.zone ,.choice {
-  
+.cotanerPaper {
+  background-image: url(pic/lined_p3.jpg);
+  background-size: 700px 700px;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+  /* border: solid rgb(90, 155, 216); */
+  position:absolute;
+  height: 1000px;
+  width: 1000px;
+  border-top-width: 3px;
+  border-left-width: 3px;
+  border-bottom-width: 3px;
+  justify-content: center;
+  margin: 0;
+}
+div {
+  display: block;
+  position: static;
+}
+.zone,
+.choice {
   width: 80px;
 
   height: 80px;
@@ -67,117 +66,134 @@ body{
   display: inline-block;
 
   transition: 0.5s all;
-
 }
 .choice {
   border: solid rgb(255, 255, 255);
   margin-bottom: 2%;
+  position:initial;
 }
-  .winPage{
-    text-align: center;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    margin-left: 10%;
-    margin-right: 10%;
-    /* border: solid rgb(70, 112, 151); */
-    position: absolute;
-    height: 400px;
-    width: 400px;
-    border-top-width: 3px;
-    border-left-width: 3px;
-    border-bottom-width: 3px;
-    justify-content: center;
-    margin: 11% 30% auto;
-    display: block;
-    background-color: rgba(255,255,255,.5);
-    /* background-image:  url(pic/c2.gif); */
-    background-size: 150px 150px;
-    background-repeat: no-repeat;
-    background-position: bottom ;
+.winPage {
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+  /* border: solid rgb(70, 112, 151); */
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  border-top-width: 3px;
+  border-left-width: 3px;
+  border-bottom-width: 3px;
+  justify-content: center;
+  margin: 11% 30% auto;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.5);
+  /* background-image:  url(pic/c2.gif); */
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
 
-  }
-  
- 
-  #submit,button{
-    margin-top: 2%;
-    background-color: palevioletred;
-    padding: 10px;
-    
-  }
-  #submit{
-    margin-left: 7%;
-  }
+#submit,
+button {
+  margin-top: 2%;
+  background-color: palevioletred;
+  padding: 10px;
+}
+#submit {
+  margin-left: 7%;
+}
 
-  
- 
-  img#back{
-    width: 500px;
-    height: 500px;  
-  }
-  img{
-    width: 80px;
-    height: 80px;  
-  }
-  h1{
-    font-family: cursive;
-    font-size: 23px;
-    font-weight: 1000;
-    /* color: rgb(161, 174, 206); */
-    color: rgb(124, 142, 187);
-  }
-  #Player1Name{
-    font-family: cursive;
-    font-size: 20px;
-    font-weight: 1000;
-    color: #00685a;
-  }
-  #Player2Name{
-    font-family: cursive;
-    font-size: 20px;
-    font-weight: 1000;
-    color: #802020;
-  }
-
-.submitPage{
+img#back {
+  width: 500px;
+  height: 500px;
+}
+img {
+  width: 80px;
+  height: 80px;
+}
+h1 {
   font-family: cursive;
-    font-size: 20px;
-    font-weight: 1000;
+  font-size: 23px;
+  font-weight: 1000;
+  /* color: rgb(161, 174, 206); */
+  color: rgb(124, 142, 187);
+}
+#Player1Name {
+  font-family: cursive;
+  font-size: 20px;
+  font-weight: 1000;
+  color: #00685a;
+}
+#Player2Name {
+  font-family: cursive;
+  font-size: 20px;
+  font-weight: 1000;
+  color: #802020;
+}
+
+.submitPage {
+  font-family: cursive;
+  font-size: 20px;
+  font-weight: 1000;
   color: rgb(216, 67, 116);
+  margin-top: 10%;
+  margin-left: 5%;
+  height: 50px;
 }
-#choiselist{
+#choiselist {
+  font-family: cursive;
+  font-size: 20px;
+  font-weight: 1000;
+  color: rgb(216, 67, 116);
+  margin-top: 10%;
+  margin-left: 5%;
+  width: 300px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+}
+.winerlist {
   width: 210px;
 }
-.winerlist{
-  width: 210px;
-}
-#donutStyl{
+/* #donutStyl {
   position: absolute;
   left: 68%;
 }
-  #catStyl{
-    position: absolute;
-    left: 78%;
-  }
-  #coffeeStyl{
-    position: absolute;
+#catStyl {
+  position: absolute;
+  left: 78%;
+}
+#coffeeStyl {
+  position: absolute;
   left: 68%;
   bottom: 30%;
-  }
-  #unicornStyl{
-    position: absolute;
-    left: 78%;
-    bottom: 30%;
-  }
-  #kwalaStyl{
-    position: absolute;
-    left: 68%;
-    bottom: 10%;
-  }
-  #susheStyl{
-    position: absolute;
-    left: 78%;
-    bottom: 10%;
-  }
- 
-  
-  
+}
+#unicornStyl {
+  position: absolute;
+  left: 78%;
+  bottom: 30%;
+}
+#kwalaStyl {
+  position: absolute;
+  left: 68%;
+  bottom: 10%;
+}
+#susheStyl {
+  position: absolute;
+  left: 78%;
+  bottom: 10%;
+} */
+.game-contaner{
+  z-index: 1000;
+}
+.data-contaner{
+  margin-top: 90%;
+  margin-left: 5%;
+  width: 90%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+}
