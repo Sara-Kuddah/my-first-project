@@ -36,25 +36,23 @@ const Player2={name:"" ,
                picSrc:"" ,
                pic:"",
                team:""};
-               localStorage.setItem("Donut",null)
-               var test = localStorage["Donut"];
-               console.log("localStorage.getItem(Donut)"+  (localStorage["Donut"] === 'null') )
-  if(localStorage["Donut"]==='null'){localStorage.setItem("Donut",0)}
+            
+  if(localStorage.getItem("Donut")==='null'){localStorage.setItem("Donut",0)}
  document.querySelector('#donut').innerText=" wins "+localStorage.getItem("Donut")+" times";
 
- if(localStorage["Cat"]==='null'){localStorage.setItem("Cat",0)}
+ if(localStorage.getItem("Cat")==='null'){localStorage.setItem("Cat",0)}
  document.querySelector('#cat').innerText=" wins "+localStorage.getItem("Cat")+" times";
 
- if(localStorage["Coffee"]==='null'){localStorage.setItem("Coffee",0)}
+ if(localStorage.getItem("Coffee")==='null'){localStorage.setItem("Coffee",0)}
  document.querySelector('#coffee').innerText=" wins "+localStorage.getItem("Coffee")+" times";
 
- if(localStorage["Unicorn"]==='null'){localStorage.setItem("Unicorn",0)}
+ if(localStorage.getItem("Unicorn")==='null'){localStorage.setItem("Unicorn",0)}
  document.querySelector('#unicorn').innerText=" wins "+localStorage.getItem("Unicorn")+" times";
 
- if(localStorage["Kwala"]==='null'){localStorage.setItem("Kwala",0)}
+ if(localStorage.getItem("Kwala")==='null'){localStorage.setItem("Kwala",0)}
  document.querySelector('#kwala').innerText=" wins "+localStorage.getItem("Kwala")+" times";
 
- if(localStorage["Sushi"]==='null'){localStorage.setItem("Sushi",0)}
+ if(localStorage.getItem("Sushi")==='null'){localStorage.setItem("Sushi",0)}
  document.querySelector('#sushi').innerText=" wins "+localStorage.getItem("Sushi")+" times";
 //I dont think that I need it any more.but maybe later.
 const img=[{xPic :"<img src=\'https://upload.wikimedia.org/wikipedia/commons/8/8b/AirAsia_X_Logo.svg\'>",
