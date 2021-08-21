@@ -223,3 +223,26 @@ h1 {
   flex-direction: row;
   justify-content:space-around;
 }
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50vh;
+}
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-linkedin::before {
+  content: "\f0e1";
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
