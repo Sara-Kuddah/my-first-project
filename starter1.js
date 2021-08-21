@@ -37,9 +37,9 @@ const Player2={name:"" ,
                pic:"",
                team:""};
                
-  if(localStorage.getItem("Donut")==='null' || localStorage.getItem("Cat")==='null'
-   ||localStorage.getItem("Coffee")==='null' || localStorage.getItem("Unicorn")==='null'
-   ||localStorage.getItem("Kwala")==='null' || localStorage.getItem("Sushi")==='null'){
+  if(localStorage.getItem("Donut")===null || localStorage.getItem("Cat")===null
+   ||localStorage.getItem("Coffee")===null || localStorage.getItem("Unicorn")===null
+   ||localStorage.getItem("Kwala")===null || localStorage.getItem("Sushi")===null){
     localStorage.setItem("Donut",0);
     localStorage.setItem("Cat",0);
     localStorage.setItem("Coffee",0);
